@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact me</title>
+    <style>
+        html,
+        body {
+            font-family: monospace;
+            margin: 0;
+            height: 100%;
+            font-size: 1.5em;
+            background-color: #fff;
+            color: #121212;
+            user-select: none;
+        }
+
+        a {
+            text-decoration: none;
+            position: relative;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        .layers {
+            position: relative;
+        }
+
+        .layer {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+
+        .red_channel {
+            color: #ff000022;
+            transition: 0.5s color;
+        }
+
+        .blue_channel {
+            color: #6EFFFF22;
+            left: 6px;
+            animation: 0.5s left_a, 1s color_a;
+        }
+
+        .center_page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        @keyframes color_a {
+            from {
+                color: #fff;
+            }
+
+            to {
+                color: #6EFFFF22;
+            }
+        }
+
+        @keyframes left_a {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center_page">
+
+        <div class="center_container">
+            <a href="https://t.me/terenty-rezman">
+                <div class="layers">
+                    <div class="red_channel layer">
+                        <h4 class="title">
+                            contact me on telegram
+                        </h4>
+                        <h1 class="title">
+                            @terenty_rezman
+                        </h1>
+                    </div>
+                    <div class="title blue_channel layer">
+                        <h4 class="title">
+                            contact me on telegram
+                        </h4>
+                        <h1 class="title">
+                            @terenty_rezman
+                        </h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
