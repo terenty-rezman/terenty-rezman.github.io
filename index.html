@@ -13,16 +13,16 @@
             height: 100%;
             font-size: 1.5em;
             background-color: #fff;
-            color: #121212;
             user-select: none;
         }
 
         a {
             text-decoration: none;
-            position: relative;
+            color: inherit;
         }
 
-        .title {
+        h1,
+        h4 {
             margin: 0;
         }
 
@@ -32,12 +32,15 @@
 
         .layer {
             position: absolute;
-            transform: translate(-50%, -50%);
+            top: 0;
+        }
+
+        .no_click {
+            pointer-events: none;
         }
 
         .red_channel {
             color: #ff000022;
-            transition: 0.5s color;
         }
 
         .blue_channel {
@@ -48,8 +51,8 @@
 
         .center_page {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100%;
         }
 
@@ -101,26 +104,18 @@
 
 <body>
     <div class="center_page">
-        <a href="https://t.me/terenty_rezman">
-            <div class="layers">
-                <div class="red_channel layer">
-                    <h4 class="title">
-                        contact me on telegram
-                    </h4>
-                    <h1 class="title">
-                        @terenty_rezman
-                    </h1>
-                </div>
-                <div class="title blue_channel layer">
-                    <h4 class="title">
-                        contact me on telegram
-                    </h4>
-                    <h1 class="title">
-                        @terenty_rezman
-                    </h1>
-                </div>
+        <div class="layers">
+            <div class="red_channel">
+                <h4>contact me on telegram</h4>
+                <a href="http://t.me/terenty_rezman">
+                    <h1>@terenty_rezman</h1>
+                </a>
             </div>
-        </a>
+            <div class="blue_channel layer no_click">
+                <h4>contact me on telegram</h4>
+                <h1>@terenty_rezman</h1>
+            </div>
+        </div>
     </div>
 </body>
 
